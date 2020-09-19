@@ -1,33 +1,33 @@
-// Your code here
-class Cat {
-  constructor(name, type){
-    this.name = name
-    this.type = type
-  }
-
-  speak(){
-    return `${this.name} says meow!`
-  }
-}
-
 class Dog {
-  constructor(name, type){
-    this.name = name
-    this.type = type
-  }
+    constructor(name, sex){
+      this.name = name
+      this.sex = sex
+    }
+    speak() {
+      return`${this.name} says woof!`
+    }
+}
 
-  speak(){
-    return `${this.name} says woof!`
+class Cat{
+  constructor(name, sex){
+    this.name = name
+    this.sex = sex
+  }
+  speak() {
+    return`${this.name} says meow!`
   }
 }
 
-class Bird {
-  constructor(name,type){
+class Bird{
+  constructor(name, sex){
     this.name = name
-    this.type = type
+    this.sex = sex
   }
-
-  speak(){
-    return this.type == "male"? `It's me! ${this.name}, the parrot!` :
-    `${this.name} says squawk!`
+  speak() {
+    if (this.sex == 'male'){
+      return `It's me! ${this.name}, the parrot!`
+    } else {
+      return `${this.name} says squawk!`
+    }
   }
+}
